@@ -3,6 +3,7 @@ import Glide, { Autoplay } from "@glidejs/glide/dist/glide.modular.esm";
 
 let slider;
 
+// First, we need to check if MESSenger is loaded
 if (!window.MESSengerLoaded) {
   window.onMESSengerLoad = startCreative;
 } else {
@@ -12,7 +13,9 @@ if (!window.MESSengerLoaded) {
 function startCreative() {
   const M = new MESSenger({
     data: {
+      // This sets the opacity of the wrap element to 1 when the ad is loaded
       showWhenLoaded: "1",
+      // An array of "slides"
       slides: [
         {
           imageUrl: "http://placekitten.com/580/400",
@@ -36,21 +39,22 @@ function startCreative() {
         },
       ],
     },
-
     watch: {
+      // Whenever the array of slides changes, destroy the slider and restart it.
       slides() {
         destroySlider();
         setupSlider();
       },
     },
-
     methods: {
+      // A method that runs at click
       exit() {
         window.open("https://mess.delivered-by-madington.com/");
       },
     },
 
     mounted() {
+      // Messenger is mounted and we can run other logic
       setupSlider();
     },
   });
