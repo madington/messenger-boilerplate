@@ -1,5 +1,6 @@
 # MESSenger boilerplate
 
+A basic
 `npm run basic`
 
 `npm run slider`
@@ -8,7 +9,7 @@
 
 ## Running in MESS
 
-To be able to run development in MESS you will need to create certificates and run `webpack serve` with the `--https` flag. This is an easy way of creating certificates: https://github.com/FiloSottile/mkcert
+To be able to run development in MESS you will need to create certificates and run `webpack serve` with the `--https` flag. This tool is provides an easy way of creating the certificates: https://github.com/FiloSottile/mkcert
 
 Example of how to run modified npm script:
 
@@ -391,7 +392,7 @@ _m-for_
 
 This directive can be used to repeat an element for every item in an array. This can be useful if you need to setup a product slider or something similar. The syntax is `item in array` or `(item, index) in array`. You can use other directives in the element you want to be repeated. If you need to use image elements or other resources that will cause console errors if no source is set, you can wrap the element that you want to be repeated in a comment: `<!-- <img src="[[dynamicSource]]" /> -->`.
 
-**NOTE**: MESSenger will remove and replace ALL comment tags if you use comments.
+**NOTE**: MESSenger will remove and replace ALL comment tags inside the parent element when you use comments.
 
 ```
 // HTML
