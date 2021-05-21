@@ -14,7 +14,7 @@ For an example with Streamedby video, run:
 
 ## Running in MESS
 
-To be able to run development in MESS you will need to create certificates and run `webpack serve` with the `--https` flag. This tool is provides an easy way of creating the certificates: https://github.com/FiloSottile/mkcert
+To be able to run development in MESS you will need to create certificates and run `webpack serve` with the `--https` flag. This tool provides an easy way of creating the certificates: https://github.com/FiloSottile/mkcert
 
 Example of how to run modified npm script:
 
@@ -94,9 +94,12 @@ Import the framework by adding this script tag to your HTML document: `<script s
 Initialize MESSenger. If you are familiar with Vue you will recognize the structure:
 
 ```
+// First we need to check that MESSenger is loaded:
 if (!window.MESSengerLoaded) {
+    // If not loaded, register a function to run when it is loaded:
   window.onMESSengerLoad = startCreative;
 } else {
+    // If loaded, we can go ahead and start the creative code
   startCreative();
 }
 function startCreative() {
