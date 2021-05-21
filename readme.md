@@ -1,13 +1,15 @@
 # MESSenger boilerplate
 
-For a basic text, background image and cta example, run:
+For a basic text, background image and CTA example, run:
 
 `npm run basic`
 
 For a simple example with a slider, run:
+
 `npm run slider`
 
 For an example with Streamedby video, run:
+
 `npm run video`
 
 ## Running in MESS
