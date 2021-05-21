@@ -10,7 +10,7 @@
 
 To be able to run development in MESS you will need to create certificates and run `webpack serve` with the `--https` flag. This is an easy way of creating certificates: https://github.com/FiloSottile/mkcert
 
-Example of how to run modify
+Example of how to run modified npm script:
 
 ```
     "basic": "webpack serve --open --config=config/basic.dev.config.js --https --cert my-cert.pem --key my-cert-key.pem",
