@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "Walsheim";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/GTWalsheimProBold.woff);
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.ad-wrapper,
+.ad-wrapper *,
+.ad-wrapper:after,
+.ad-wrapper:before {
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+
+.ad-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  font-family: "Walsheim", sans-serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  opacity: 0;
+
+  .background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    transform: scale(1.4);
+  }
+
+  .logo {
+    width: 3em;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    &:after {
+      content: "";
+      padding-bottom: 100%;
+      display: block;
+      float: right;
+    }
+  }
+
+  .texts-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    transform: translate(-50%, -60%);
+    text-align: center;
+  }
+  .header {
+    transform: translateY(0.5em);
+    opacity: 0;
+    line-height: 1;
+    font-size: 2em;
+    word-wrap: break-word;
+  }
+  .sub-header {
+    font-size: 0.85em;
+    transform: translateY(0.3em);
+    opacity: 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+  }
+
+  .cta {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 70%);
+    line-height: 2.5em;
+    font-size: 0.6em;
+    border-radius: 3em;
+    padding: 0 1.5em;
+    opacity: 0;
+  }
+
+  .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    &[data-object-fit="cover"] {
+      object-fit: cover;
+    }
+    &[data-object-fit="contain"] {
+      object-fit: contain;
+    }
+  }
+  .br,
+  .text {
+    display: none;
+  }
+
+  &.show {
+    opacity: 1;
+    .header {
+      transition: 1.4s transform cubic-bezier(0.25, 1, 0.25, 1),
+        1.4s opacity cubic-bezier(0.25, 1, 0.25, 1);
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .sub-header {
+      transition: 1.2s transform 0.2s cubic-bezier(0.25, 1, 0.25, 1),
+        1.2s opacity 0.2s cubic-bezier(0.25, 1, 0.25, 1);
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .cta {
+      transition: 1.4s transform 0.2s cubic-bezier(0.25, 1, 0.25, 1),
+        1.4s opacity 0.2s cubic-bezier(0.25, 1, 0.25, 1);
+      transform: translate(-50%, 60%);
+      opacity: 1;
+    }
+    .background {
+      transform: scale(1);
+      transition: 1.4s transform cubic-bezier(0.25, 1, 0.25, 1);
+    }
+  }
+}
+
+.s-320x250 .wrap {
+  width: 320px;
+  height: 250px;
+  font-size: 20px;
+
+  .s-320x250 .br,
+  .s-320x250 .text {
+    display: block;
+  }
+}
+
+.s-580x400 .wrap {
+  width: 580px;
+  height: 400px;
+  font-size: 30px;
+
+  .s-580x400 .br,
+  .s-580x400 .text {
+    display: block;
+  }
+}
+
+.s-300x600 .wrap {
+  width: 300px;
+  height: 600px;
+  font-size: 26px;
+
+  .br,
+  .text {
+    display: block;
+  }
+}
