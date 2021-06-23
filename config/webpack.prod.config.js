@@ -11,23 +11,7 @@ const ROOT_DIRECTORY = process.cwd();
 
 module.exports = {
   mode: "production",
-<<<<<<< HEAD
   target: "es5",
-=======
-  entry: {
-    messenger: path.resolve(ROOT_DIRECTORY, "src/aditive/loader.js"),
-    test: path.resolve(ROOT_DIRECTORY, "src/index.js"),
-    messenger_parent: path.resolve(
-      ROOT_DIRECTORY,
-      "src/aditive/aditive-parent.js"
-    ),
-  },
-  output: {
-    path: path.resolve(ROOT_DIRECTORY, "dist"),
-    filename: "[name].js",
-    chunkFilename: "[name].chunk.js",
-  },
->>>>>>> 2c11ac43d8d11e430d752836fedc42e5687cada6
   module: {
     rules: [
       {
@@ -230,36 +214,11 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-<<<<<<< HEAD
-=======
-    new HtmlWebpackPlugin({
-      template: path.resolve(ROOT_DIRECTORY, "src/index.html"),
-      filename: "index.html",
-      minify: {
-        collapseWhitespace: false,
-        removeComments: true,
-        removeRedundantAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        useShortDoctype: true,
-        minifyJS: true,
-        minifyCSS: true,
-        minifyURLs: true,
-      },
-      templateParameters: {
-        baseRef: "",
-      },
-      chunks: ["test"],
-    }),
->>>>>>> 2c11ac43d8d11e430d752836fedc42e5687cada6
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash:8].bundle.css",
       chunkFilename: "[name].[contenthash:8].chunk.css",
     }),
-<<<<<<< HEAD
     /*     new CompressionPlugin({
-=======
-    new CompressionPlugin({
->>>>>>> 2c11ac43d8d11e430d752836fedc42e5687cada6
       algorithm: "gzip",
       compressionOptions: { level: 9 },
       filename: "[name].gz[query]",
@@ -272,11 +231,7 @@ module.exports = {
       filename: "[name].br[query]",
       minRatio: 0.8,
       test: /\.(js|css|html|svg)$/,
-<<<<<<< HEAD
     }), */
-=======
-    }),
->>>>>>> 2c11ac43d8d11e430d752836fedc42e5687cada6
   ],
   optimization: {
     minimize: true,
@@ -290,10 +245,7 @@ module.exports = {
             comparisons: false,
             ecma: 5,
             inline: 2,
-<<<<<<< HEAD
             arrows: false,
-=======
->>>>>>> 2c11ac43d8d11e430d752836fedc42e5687cada6
           },
           mangle: {
             safari10: true,
@@ -327,12 +279,6 @@ module.exports = {
     ],
     /*     runtimeChunk: {
       name: (entrypoint) => `runtime-${entrypoint.name}`,
-<<<<<<< HEAD
-=======
-    },
-    splitChunks: {
-      chunks: "all",
->>>>>>> 2c11ac43d8d11e430d752836fedc42e5687cada6
     }, */
   },
 };
