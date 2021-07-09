@@ -91,6 +91,8 @@ Import the framework by adding this script tag to your HTML document: `<script s
 
 ## Step two
 
+Load `<script src="https://delivered-by-madington.com/messenger/messenger.js?api_key=YOUR_API_KEY_HERE"></script>` in the `<head>`element of your html file. Contact Madington (info(at)madington.com) to get an api key.
+
 Initialize MESSenger. If you are familiar with Vue you will recognize the structure:
 
 ```
