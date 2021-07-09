@@ -94,16 +94,6 @@ Import the framework by adding this script tag to your HTML document: `<script s
 Initialize MESSenger. If you are familiar with Vue you will recognize the structure:
 
 ```
-// First we need to check that MESSenger is loaded:
-if (!window.MESSengerLoaded) {
-    // If not loaded, register a function to run when it is loaded:
-  window.onMESSengerLoad = startCreative;
-} else {
-    // If loaded, we can go ahead and start the creative code
-  startCreative();
-}
-function startCreative() {
-
     const M = new MESSenger({
         bannerSize: "320x250",
         data: {
@@ -131,7 +121,6 @@ function startCreative() {
             runOtherLogic();
         }
     })
-}
 
 ```
 
